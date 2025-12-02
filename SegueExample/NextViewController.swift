@@ -15,7 +15,14 @@ class NextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func lastvcAction(_ sender: Any) {
+        performSegue(withIdentifier: "LastVcSegue", sender: nil)
+    }
+    
+    @IBAction func goBackButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
