@@ -16,7 +16,10 @@ class NextViewController: UIViewController {
     }
     
     @IBAction func lastvcAction(_ sender: Any) {
-        performSegue(withIdentifier: "LastVcSegue", sender: nil)
+        //performSegue(withIdentifier: "LastVcSegue", sender: nil)
+        let mainVC = UIStoryboard(name: "Main", bundle: nil)
+        let lastVC = mainVC.instantiateViewController(withIdentifier: "LastVC")
+        navigationController?.pushViewController(lastVC, animated: true)
     }
     
     @IBAction func goBackButton(_ sender: Any) {

@@ -21,7 +21,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actionButton(_ sender: Any) {
-        performSegue(withIdentifier: "NextVCSegue", sender: nil)
+//        performSegue(withIdentifier: "NextVCSegue", sender: nil)
+        let mainVc = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainVc.instantiateViewController(withIdentifier: "NextVc")
+        let navVc = UINavigationController(rootViewController: vc)
+        //navigationController?.pushViewController(vc, animated: true)
+        present(navVc, animated: true )
     }
     
     
