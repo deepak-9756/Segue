@@ -10,5 +10,4 @@ import UIKit
 struct UserModel{
     let avtar: UIImage
     let name: String
-    let bio: String
 }
